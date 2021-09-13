@@ -1,38 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body { 
+  background-color: #498CEC;
+  font-family: 'Lato', sans-serif;
+  cursor: default;
+}
 .App {
-  text-align: center;
+  max-width: 1192px;
+  margin: 0 auto;
+  padding: 75px 75px 122px 99px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  position: relative;
+  margin: 0 0 190px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.change-city {
+  display: none
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.currentCity {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+.currentCityName {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+}
+.change-city__button {
+  border: none;
+  background-color: white;
+  color: #1086FF;
+  font-size: 30px;
+  line-height: 36px;
+}
+ul {
+  list-style-type: none;
+}
+.cityList {
+  padding: 30px;
+  background-color: white;
+  margin-top: -10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.city {
+  margin: 0 0 5px 0;
+  padding: 5px 5px 10px 5px;
+  border-bottom: 1px solid rgba(65, 114, 240, 0.5);
+}
+.city:hover {
+  text-decoration: underline;
+}
+.search {
+  
+}
+.main-search {
+  max-width: 400px;
+}
+.search__cityName {
+  width: 125px;
+  font-size: 50px;
+  line-height: 60px;
   color: white;
+  font-weight: 400;
+  margin: 0 0 9px 0;
 }
-
-.App-link {
-  color: #61dafb;
+.search__cityInfo {
+  opacity: 0.6;
+  color: white;
+  font-size: 18px;
+  line-height: 22px;
 }
+.search__changeTown {
+  margin: 0 29px 0 0;
+}
+.search__currentTown {
+  
+} 
+.search__currentTown::before {
+  
+  margin-right: 12px;
+}
+.temperature {
+  position: absolute;
+  width: 77px;
+  height: 29px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 8px;
+  display: flex;
+  top: 8px;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-start;
+}
+.temperature::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-image: url('img/º.svg');
+ 
+}
+.temperature__celsius {
+  color: white;
+  opacity: 0.4;
+  padding: 5px 14px 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.temperature__fahrenheit {
+  color: white;
+  opacity: 0.4;
+  padding: 5px 14px 3px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.temperature__chosen {
+  background-color: rgba(255, 255, 255, .2);
+  opacity: 1;
+}
+.main-info {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 218px 0;
+}
+.info {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.info__photo {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.info__number {
+  position: relative;
+  left: -20px;
+  color: white;
+  font-size: 150px;
+}
+.info__description {
+  color: white;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: normal;
+}
+.lower-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lower-info__item {
+
+}
+.item-name {
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  opacity: 0.6;
+  margin: 0 0 20px 0;
+}
+.item-info {
+  color: white;
+  font-size: 25px;
+  line-height: 30px;
+}
+@media (max-width: 476px) {
+  .App {
+    padding: 20px 20px 10px 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .search__cityName {
+    font-size: 30px;
+  }
+  .search__cityInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+  }
+  .temperature {
+    top: 17px;
+  }
+  .main {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  .main-seacrh {
+    max-width: 350px;
+  }
+  .info__number {
+    font-size: 100px;
+  }
+  .info__description {
+    font-size: 18px;
+  }
+  .main-info {
+    margin: 0 0 100px 0;
+  }
+  .lower-info {
+    flex-wrap: wrap;
+  }
+  .lower-info__item {
+    flex: 0 1 50%;
+  }
+  .item-name {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 5px 0;
+  }
+  .item-info {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+  .change-city__button {
+    position: relative;
+    z-index: 10;
   }
 }
