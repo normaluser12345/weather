@@ -9,7 +9,7 @@ function MainInfo ({ temperature, weatherDescription, icon }) {
     return (
         <div className = "main-info">
             <div className = "info">
-                <img className = "info__photo" width = "200" height = "200" src = {source} alt="weather"></img>
+                <img className = "info__photo" src = {source} alt="weather"></img>
                 <h1 className = "info__number">{temperature}°</h1>
             </div>
             <p className = "info__description">{weatherDescription}</p>
