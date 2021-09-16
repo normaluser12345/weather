@@ -19,12 +19,12 @@ function App() {
   const apikey = '1731d4f498d9084d8807e322407a08e1';
 
   const [city, setCity] = useState('Moscow')
-  const [temperature, setTemperature] = useState()
+  const [temperature, setTemperature] = useState(0)
   const [weatherDescription, setWeatherDescription] = useState('')
-  const [wind, setWind] = useState()
-  const [pressure, setPressure] = useState()
-  const [humidity, setHumidity] = useState()
-  const [precipitation, setPrecipition] = useState()
+  const [wind, setWind] = useState(0)
+  const [pressure, setPressure] = useState(0)
+  const [humidity, setHumidity] = useState(0)
+  const [precipitation, setPrecipition] = useState(0)
   const [icon, setIcon] = useState('')
   const [measure, setMeasure] = useState('metric')
 
