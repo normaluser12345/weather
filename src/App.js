@@ -76,7 +76,7 @@ function App() {
       setWeatherDescription(result.weather[0].description)
       setWind(result.wind.speed)
       setPressure(result.main.pressure)
-      /*setHumidity(Math.round(result.main.humidity))*/
+      setHumidity(Math.round(result.main.humidity))
     })
 
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=1&appid=${apikey}`)
@@ -84,7 +84,6 @@ function App() {
     .then(result => {
       console.log(result)
       setPrecipition(Math.round(result.list[0].pop * 100))
-        setHumidity(Math.round(result.list[0].main.humidity))
     })
   }
 
