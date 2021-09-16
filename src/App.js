@@ -29,7 +29,7 @@ function App() {
   const [measure, setMeasure] = useState('metric')
 
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${measure}&lang=ru&appid=${apikey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${measure}&lang=ru&appid=${apikey}`)
     .then(response => response.json())
     .then(result => {
       setIcon(result.weather[0].icon)
@@ -66,7 +66,7 @@ function App() {
     currentCity.style.display = "block"
     changeCity.style.display = "none"
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${measure}&lang=ru&appid=${apikey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${measure}&lang=ru&appid=${apikey}`)
     .then(response => response.json())
     .then(result => {
       setIcon(result.weather[0].icon)
